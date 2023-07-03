@@ -1,0 +1,165 @@
+%DON'T WORRY ABOUT THESE, LESS IMPORTANT WHEN BEGINNING
+\usepackage{amsmath, amsthm, fancyhdr, amssymb, graphicx, mdframed, enumitem, manfnt, tikz, upgreek, bbm, mathrsfs, hyperref, marvosym, theoremref}
+
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage[left=2.5cm, right=2.5cm, top=3cm]{geometry}
+\usepackage{tikz-cd}
+
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\usepackage[makeroom]{cancel} 
+\newcounter{count}
+%------------SPECIAL NOTES!--------------------------------
+%use the shorter argument if you would like to use one of the environments
+\newtheorem{prop}[count]{Proposition}
+\newtheorem{ec}[count]{Extra Credit}
+\newtheorem{thm}[count]{Theorem}
+\newtheorem{cor}[count]{Corollary}
+\newtheorem{pro}{Problem}
+\newtheorem{defi}[count]{Definition}
+\newtheorem{lem}[count]{Lemma}
+\newtheorem{res}[count]{Result}
+\newtheorem{cl}[count]{Claim}
+\newtheorem{aun}{Author's Note}
+\newtheorem{conj}{Conjecture}
+\newtheorem{exx}[count]{Example}
+\newtheorem{qq}[count]{Question}
+\newtheorem{app}[count]{Approach}
+\newenvironment{pfid}{\noindent \emph{Sketch of Proof.}}{\hfill $\diamond$ \linebreak}
+
+%\PROBLEMBOX FOR HOMEWORK TEMPLATE
+\newcommand{\problembox}[1]{
+  \noindent\fbox{
+    \parbox{\textwidth}{
+    \begin{pro}
+    #1
+    \end{pro} 
+  }} 
+  \vspace{0.1cm}
+}
+
+
+\newenvironment{ins}
+{
+\noindent \textbf{Instructions:} 
+}
+{\linebreak}
+
+\setlist[description]{leftmargin=\parindent,labelindent=\parindent}
+
+
+%New Commands
+\renewcommand\qedsymbol{\manimpossiblecube}
+\renewcommand{\labelitemi}{\textasteriskcentered}
+
+%======================LETTERS==============================
+%------------------Blackboard Bold-------------------------
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\D}{\mathbb{D}}
+%------------------Calligraphy-------------------------
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cO}{\mathcal{O}}
+
+
+
+
+%===================TOPOLOGY==========================
+\newcommand{\T}{\mathbb{\tau}}
+\newcommand{\Dt}{\overline{D}^2}
+\newcommand{\id}[1]{\operatorname{Id}_{#1}}
+\newcommand{\ee}{\varepsilon}
+\newcommand{\ph}{\varphi}
+\renewcommand{\phi}{\varphi}
+\newcommand{\mte}[1]{\quad \text{#1} \quad}
+%THE FOLLOWING IS FOR RESTRICTION FUNCTIONS--------------------------------
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
+
+  \usepackage{stackengine}[2013-09-11]
+\usepackage{scalerel}
+\stackMath
+\def\ptt{\mathrel{\ThisStyle{\raisebox{-.2ex}{$\SavedStyle\scalerel*%
+    {\stackinset{c}{}{t}{.5ex}{\smash{-}}{\pitchfork}}{\pitchfork}$}}}}
+
+
+%========NEW BRACKETS====================
+\newcommand{\justif}[1]{&{\quad}&\text{#1}}
+\renewcommand{\top}[1]{\lrp{#1, \tau_{#1}}}
+\newcommand{\inv}{ ^{-1} }
+\newcommand{\lrp}[1]{\left ( {#1} \right )}
+\newcommand{\lrb}[1]{\left [ {#1} \right ]}
+\newcommand{\lrsq}[1]{\left { {#1} \right }}
+\newcommand{\lrabs}[1]{\left | {#1} \right |}
+\newcommand{\lrfl}[1]{\left \lfloor {#1} \right \rfloor}
+\newcommand{\lrceil}[1]{\left \lceil {#1} \right \rceil}
+\newcommand{\jq}[1]{\justif{#1}}
+\newcommand{\lrang}[1]{\left\langle #1 \right\rangle}
+\newcommand{\lrnorm}[1]{\left | \left | #1 \right | \right |}
+
+%===================HW STUFF=========================
+\newcommand{\stuck}[1]{{\color{red} \textbf{STUCK HERE:} #1}}
+\newcommand{\checkk}[1]{{\color{blue} \textbf{CHECK THIS} #1}}
+
+
+
+%===================ANALYSIS==========================
+\newcommand{\diam}[1]{\operatorname{diam} \lrp{#1}}
+
+
+
+%==================ALGEBRA ===========================
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\ring}[1]{\lrp{ #1, +, \times}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\jac}[1]{\operatorname{Jac}\lrp{#1}}
+\newcommand{\gal}[1]{\mathrm{Gal} \lrp{#1}}
+\renewcommand{\gcd}[1]{\operatorname{gcd} \lrp{#1}}
+\newcommand{\aut}[1]{\operatorname{Aut}\lrp{#1}}
+\newcommand{\inn}[1]{\operatorname{Inn}\lrp{#1}}
+\newcommand{\lcm}[1]{\operatorname{lcm}\lrp{#1}}
+\newcommand{\orb}[1]{\operatorname{Orb}\lrp{#1}}
+\newcommand{\stab}[1]{\operatorname{Stab}\lrp{#1}}
+\newcommand{\ann}[1]{\operatorname{Ann}\lrp{#1}}
+\newcommand{\zmod}[1]{\Z/#1\Z}
+%\renewcommand{\char}{\text{ char }}
+\newcommand{\syl}[2]{\operatorname{Syl}_{#1}{\lrp{#2}}}
+\newcommand{\commringid}{\text{Let $R$ be a commutative ring with identity $1 \neq 0$}}
+\newcommand{\ringid}{\text{Let $R$ be a ring with identity $1 \neq 0$}}
+
+\newcommand{\map}[5]{#1 : \begin{array}{ccl}
+#2 & \to & #3\linebreak
+#4 & \mapsto & #5
+\end{array}
+}
+
+
+
+
+
+
+%Homework Presets
+\lhead{Sireesh Vinnakota}
+\newcommand{\ch}[1]{\chead{#1}}
+\newcommand{\rh}[2]{\rhead{#1, #2}}
+\newcommand{\coll}[1]{\noindent \textbf{Collaborators:} \emph{#1} \linebreak}
+
+%--------------Header formatting-------------------------------------
+%\chead{March 5, 2020}
+%\begin{enumerate}[leftmargin=0.5cm, label= \alph*.]
+
+
+

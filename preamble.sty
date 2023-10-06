@@ -39,6 +39,11 @@
   \vspace{0.1cm}
 }
 
+\newcommand{\doctitle}[1]{
+  \begin{center}
+      \textbf{#1}
+  \end{center}
+}
 
 \newenvironment{ins}
 {
@@ -74,6 +79,7 @@
 
 
 %===================TOPOLOGY==========================
+\iffalse
 \newcommand{\T}{\mathbb{\tau}}
 \newcommand{\Dt}{\overline{D}^2}
 \newcommand{\id}[1]{\operatorname{Id}_{#1}}
@@ -94,7 +100,7 @@
 \stackMath
 \def\ptt{\mathrel{\ThisStyle{\raisebox{-.2ex}{$\SavedStyle\scalerel*%
     {\stackinset{c}{}{t}{.5ex}{\smash{-}}{\pitchfork}}{\pitchfork}$}}}}
-
+\fi
 
 %========NEW BRACKETS====================
 \newcommand{\justif}[1]{&{\quad}&\text{#1}}
@@ -111,9 +117,10 @@
 \newcommand{\lrnorm}[1]{\left | \left | #1 \right | \right |}
 
 %===================HW STUFF=========================
+\iffalse
 \newcommand{\stuck}[1]{{\color{red} \textbf{STUCK HERE:} #1}}
 \newcommand{\checkk}[1]{{\color{blue} \textbf{CHECK THIS} #1}}
-
+\fi
 
 
 %===================ANALYSIS==========================
@@ -152,11 +159,11 @@
 
 
 
-%Homework Presets
+%Header Presets
 \lhead{First Lastname}
 \newcommand{\ch}[1]{\chead{#1}}
 \newcommand{\rh}[2]{\rhead{#1, #2}}
-\newcommand{\coll}[1]{\noindent \textbf{Collaborators:} \emph{#1} \linebreak}
+\newcommand{\coll}[1]{\noindent \textbf{Collaborators:} \emph{#1}}
 
 %--------------Header formatting-------------------------------------
 %\chead{March 5, 2020}
